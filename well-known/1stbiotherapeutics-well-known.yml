@@ -1,0 +1,67 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Live unauthenticated GET of the named /.well-known/ path list against every host this
+  record knows: the registrable domain 1stbio.com and its www host. There are no API
+  baseURL hosts and no OpenAPI servers[] hosts to probe (apis: [] — the company publishes
+  no API), and no fetched discovery document named an authorization_servers host, so the
+  host list is complete.
+note: >-
+  Every probed path returned 404. This file records a measured ABSENCE, not a presence.
+  No WellKnown, APICatalog or SecurityTxt pointer is wired into apis.yml, because nothing
+  was served. The 404 bodies are the WordPress/WP Engine theme 404 page (~65KB HTML) for
+  paths handled by WordPress and the bare nginx 404 (548 bytes) for /.well-known/security.txt
+  and /llms.txt.
+hosts:
+- host: www.1stbio.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: 1stbio.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

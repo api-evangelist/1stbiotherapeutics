@@ -1,0 +1,49 @@
+# 1ST Biotherapeutics
+
+> 1ST Biotherapeutics (1STBIO) is a clinical-stage biopharmaceutical company founded in 2016 and
+> headquartered in Gyeonggi-do, South Korea. It discovers and develops novel small-molecule
+> therapeutics for areas of significant unmet medical need — neurodegenerative disease,
+> immuno-oncology, metabolic disease and rare/orphan disease — supported by a genomics-based
+> target discovery capability.
+
+## Machine-readable API surface
+
+**1ST Biotherapeutics publishes no API.** As of 2026-09-05 the company operates no developer
+program, no developer portal, no SDK, and no machine-readable contract of any kind. This was
+established by probe, not by assumption:
+
+- No OpenAPI, Swagger, GraphQL SDL, AsyncAPI or MCP surface on any host the company controls.
+- No `api.`, `developer.`, `docs.`, `dev.` or `portal.` subdomain of `1stbio.com` resolves in DNS.
+- Every `/.well-known/` discovery path probed on `1stbio.com` and `www.1stbio.com` returned 404
+  (see `well-known/1stbiotherapeutics-well-known.yml` for the full probe record).
+- The corporate site is an eight-page WordPress install on WP Engine. Its `/wp-json` endpoint
+  serves the stock WordPress REST API discovery document (namespaces `wp/v2`, `oembed/1.0`,
+  `yoast/v1`, `gravityforms/v2`, `wpe/cache-plugin/v1`). That is default CMS infrastructure that
+  ships with WordPress, not a product API this company designed, documented or supports, so it is
+  deliberately NOT catalogued as an API of 1ST Biotherapeutics.
+
+If you are an agent looking for a callable 1ST Biotherapeutics API, there is not one to call.
+
+## Company pages
+
+- [Home](https://www.1stbio.com/): corporate overview and mission.
+- [About Us](https://www.1stbio.com/about-us/): company history, leadership and scientific team.
+- [R&D Pipeline](https://www.1stbio.com/rd-pipeline/): development-stage programs.
+- [Disease Areas](https://www.1stbio.com/disease-areas/): therapeutic focus areas.
+- [Partnerships](https://www.1stbio.com/partnerships/): collaboration and licensing.
+- [Investors & Media](https://www.1stbio.com/investors-media/): news and investor material.
+- [Contact Us](https://www.1stbio.com/contact-us/): general enquiries (info@1stbio.com).
+- [Privacy Policy](https://www.1stbio.com/privacy-policy/)
+
+## This profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/1stbiotherapeutics/refs/heads/main/apis.yml):
+  the APIs.json record behind this profile.
+- [Domain security probe](security/1stbiotherapeutics-domain-security.yml): TLS/HSTS/DNSSEC/CAA/SPF/DMARC
+  observed on `1stbio.com` on 2026-09-05.
+- [Well-known probe](well-known/1stbiotherapeutics-well-known.yml): the discovery-path probe record.
+
+## Optional
+
+- This is an independent third-party profile maintained by [API Evangelist](https://apievangelist.com).
+  It is not operated by, affiliated with, or endorsed by 1ST Biotherapeutics.

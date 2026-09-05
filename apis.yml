@@ -1,10 +1,25 @@
 aid: 1stbiotherapeutics
-name: 1st Biotherapeutics
-description: '1st Biotherapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+name: 1ST Biotherapeutics
+description: '1ST Biotherapeutics (1STBIO) is a clinical-stage biopharmaceutical company
+  founded in 2016 and headquartered in Gyeonggi-do, South Korea. It discovers and develops
+  novel small-molecule therapeutics for areas of significant unmet medical need, with
+  programs spanning neurodegenerative disease, immuno-oncology, metabolic disease and
+  rare/orphan disease, supported by a genomics-based target discovery capability and an
+  R&D network of academic, hospital, CRO and investor partners. The company sells no
+  software product and operates no developer program: its public web presence is an
+  eight-page corporate and investor site with no API, SDK, developer portal or
+  machine-readable contract of any kind.'
+image: https://www.1stbio.com/android-chrome-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/1stbiotherapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-harvest:
+  source: secondary-market
+  url: https://equityzen.com/company/1stbiotherapeutics
+  status: 200
+  note: >-
+    Secondary-market venue listing the company was surfaced from. Recorded as harvest
+    provenance only — it is NOT the company's Website, which is https://www.1stbio.com/.
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +27,15 @@ created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Drug Discovery
+- Life Sciences
+- Healthcare
+- Oncology
+- Neurodegenerative Disease
+- Rare Disease
+- South Korea
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +43,40 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/1stbiotherapeutics-domain-security.yml
+- type: LLMsTxt
+  url: llms/1stbiotherapeutics-llms.txt
 - type: Website
-  url: https://equityzen.com/company/1stbiotherapeutics
+  url: https://www.1stbio.com/
+- type: PrivacyPolicy
+  url: https://www.1stbio.com/privacy-policy/
+- type: Support
+  url: https://www.1stbio.com/contact-us/
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    1ST Biotherapeutics is a clinical-stage drug-discovery company whose entire public web
+    presence is an eight-page WordPress marketing and investor site; no api./developer./docs./
+    dev./portal. subdomain of 1stbio.com resolves in DNS, every /.well-known/ discovery path
+    404s, and the only machine-readable endpoint on the domain is the stock WordPress REST
+    API discovery document at /wp-json (namespaces wp/v2, oembed/1.0, yoast/v1, gravityforms/v2)
+    — default CMS infrastructure, not a product API the company designed or supports.
+  evidence:
+  - url: https://www.1stbio.com/
+    status: 200
+  - url: https://www.1stbio.com/openapi.json
+    status: 404
+  - url: https://www.1stbio.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.1stbio.com/llms.txt
+    status: 404
+  - url: https://www.1stbio.com/wp-json
+    status: 200
+  checked: '2026-09-05'
